@@ -10,7 +10,7 @@ private:
     std::vector<Cell*> cells; // Агрегация (көрсеткіштер векторы)
     
     // Статикалық өріс
-    static int totalGamesPlayed;
+    inline static int totalGamesPlayed;
 
 public:
     Board() {
@@ -31,7 +31,7 @@ public:
     int getSize() const { return cells.size(); }
     Cell* getCell(int index) { return cells[index % cells.size()]; }
 
-    static static void incrementGames() {
+    static void incrementGames() {
         totalGamesPlayed++;
     }
 
